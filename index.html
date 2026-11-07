@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f5f2">
+  <title>Бардачок • Понимать машину. Ездить спокойнее.</title>
+  <meta name="description" content="Понятный справочник об автомобиле: устройство, обслуживание, зимнее вождение и безопасность. Девять тем, 121 заметка и личная памятка проверок.">
+  <meta property="og:title" content="Бардачок. Полезное о машине всегда под рукой.">
+  <meta property="og:description" content="От первой машины до устройства двигателя. Понятный справочник с поиском и памяткой проверок.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://lonagi.github.io/bardachok/">
+  <meta property="og:image" content="https://lonagi.github.io/bardachok/assets/hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://lonagi.github.io/bardachok/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+  <script>
+    try { const choice = localStorage.getItem('bardachok-theme'); document.documentElement.dataset.theme = choice || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (_) {}
+  </script>
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#guide">Перейти к справочнику</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#top" aria-label="Бардачок, в начало">
+        <span class="brand-mark" aria-hidden="true"><span class="icon" style="--icon:url(assets/icons/steering-wheel.svg)"></span></span>
+        <span>бардачок<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#guide">Справочник</a>
+        <a href="#checklist">Памятка</a>
+        <a href="#about">О проекте</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-trigger" type="button" data-open-search aria-label="Поиск по справочнику" aria-haspopup="dialog" aria-controls="search-dialog">
+          <span class="icon" style="--icon:url(assets/icons/magnifying-glass.svg)" aria-hidden="true"></span><span class="search-label">Найти</span><kbd>/</kbd>
+        </button>
+        <button class="icon-button theme-button" type="button" aria-label="Включить тёмную тему" title="Переключить тему">
+          <span class="icon theme-moon" style="--icon:url(assets/icons/moon.svg)" aria-hidden="true"></span>
+          <span class="icon theme-sun" style="--icon:url(assets/icons/sun.svg)" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Справочник нормального водителя</p>
+        <h1 id="hero-title">Понимать машину. <span>Ездить спокойнее.</span></h1>
+        <p class="hero-description">Что происходит под капотом, что проверять перед дорогой и о чём спросить в сервисе. Простыми словами.</p>
+        <a class="button button-primary" href="#guide">Открыть справочник<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/hero.webp" alt="Серебристое купе в светлом автомобильном гараже" width="1536" height="1024" fetchpriority="high">
+      </figure>
+    </section>
+
+    <div class="quick-start wrap" aria-label="Быстрый переход к ситуации">
+      <p>С чего начнём?</p>
+      <a href="#ownership" data-chapter="ownership">Первая машина<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      <a href="#suspension" data-chapter="suspension">Что-то стучит<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      <a href="#winter" data-chapter="winter">Скоро зима<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      <a href="#checklist">Проверить главное<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+    </div>
+
+    <section class="guide-section wrap" id="guide" aria-labelledby="guide-title">
+      <div class="section-intro">
+        <h2 id="guide-title">Всё по полочкам<span class="accent">.</span></h2>
+        <p>Девять тем. Читай по порядку или открывай то, что нужно сейчас.</p>
+      </div>
+      <div class="guide-layout">
+        <aside class="contents" aria-label="Содержание справочника">
+          <div class="contents-inner">
+            <span class="contents-label">Содержание</span>
+            <nav class="chapter-navigation" aria-label="Темы"><a class="chapter-link" data-chapter="ownership" href="#ownership">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/car-profile.svg)"></span><span>Владение</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="transmission" href="#transmission">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/gear.svg)"></span><span>Трансмиссия</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="visibility" href="#visibility">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/eye.svg)"></span><span>Обзор и тормоза</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="safety" href="#safety">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/shield-check.svg)"></span><span>Безопасность</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="driving" href="#driving">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/steering-wheel.svg)"></span><span>На дороге</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="winter" href="#winter">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/snowflake.svg)"></span><span>Зима</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="position" href="#position">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/seat.svg)"></span><span>Посадка</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="suspension" href="#suspension">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/wrench.svg)"></span><span>Подвеска</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a>
+<a class="chapter-link" data-chapter="engines" href="#engines">
+      <span class="icon " aria-hidden="true" style="--icon:url(assets/icons/engine.svg)"></span><span>Двигатели</span><span class="icon chapter-link-arrow" aria-hidden="true" style="--icon:url(assets/icons/arrow-up-right.svg)"></span>
+    </a></nav>
+            <a class="download-link" href="guide.md" download="Бардачок-конспект.md"><span class="icon" style="--icon:url(assets/icons/download-simple.svg)" aria-hidden="true"></span>Скачать конспект</a>
+            <div class="sidebar-note"><span class="icon" style="--icon:url(assets/icons/bookmark-simple.svg)" aria-hidden="true"></span><p>К хорошим привычкам удобно возвращаться.</p></div>
+          </div>
+        </aside>
+        <div class="reader">
+          <div class="mobile-chapter-picker">
+            <label for="chapter-select">Выбрать тему</label>
+            <div class="select-wrapper"><select id="chapter-select"><option value="ownership">1. Владение</option><option value="transmission">2. Трансмиссия</option><option value="visibility">3. Обзор и тормоза</option><option value="safety">4. Безопасность</option><option value="driving">5. На дороге</option><option value="winter">6. Зима</option><option value="position">7. Посадка</option><option value="suspension">8. Подвеска</option><option value="engines">9. Двигатели</option></select><span class="icon" style="--icon:url(assets/icons/caret-down.svg)" aria-hidden="true"></span></div>
+          </div>
+          <div id="chapters"><article class="chapter" id="ownership" aria-labelledby="title-ownership">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 1 из 9</span><span>14 заметок</span></div>
+        <h3 id="title-ownership" tabindex="-1">Базовое владение автомобилем</h3>
+        <p>Повседневное обслуживание начинается с шин, документов и условий хранения.</p>
+      </header>
+      <section class="note-group"><h4>Основа владения</h4><ul><li id="ownership-01" class="note"><p>Необязательно быть механиком: задавайте вопросы, изучайте эксплуатацию и обслуживание.</p></li>
+<li id="ownership-02" class="note"><p>Не превращайте страх мелких повреждений в препятствие пользованию машиной.</p></li>
+<li id="ownership-03" class="note"><p>Автор предлагает защитную плёнку; оцените целесообразность.</p></li>
+<li id="ownership-04" class="note"><p>Влага, соли и температурные перепады ускоряют старение; сухое хранение уменьшает воздействие.</p></li>
+<li id="ownership-05" class="note"><p>Заранее решите вопрос парковки и включите её стоимость в бюджет.</p></li>
+<li id="ownership-06" class="note"><p>Различайте ПТС, СТС, договор покупки и страховку; сохраняйте договор. Юридические пояснения относятся к России 2021 года.</p></li></ul></section><section class="note-group"><h4>Шины и сцепление</h4><ul><li id="ownership-07" class="note"><p>Шины обеспечивают сцепление; важны сезон, состав, протектор и отвод воды.</p></li>
+<li id="ownership-08" class="note"><p>Выбирайте зимние шины по дорогам; после смены избегайте излишней уверенности.</p></li>
+<li id="ownership-09" class="note"><p>Проверяйте износ, дату изготовления, трещины, боковые повреждения и видимый корд.</p></li>
+<li id="ownership-10" class="note"><p>Неравномерный износ требует диагностики; давление сверяйте с табличкой автомобиля.</p></li></ul></section><section class="note-group"><h4>Обслуживание</h4><ul><li id="ownership-11" class="note"><p>Автор обсуждает прогрев; фиксированные минуты ожидания нельзя переносить на любые двигатели.</p></li>
+<li id="ownership-12" class="note"><p>Масло стареет при работе, включая пробки; учитывайте моточасы и записывайте замены.</p></li>
+<li id="ownership-13" class="note"><p>Тормозная жидкость передаёт давление; накопление влаги повышает риск закипания. Проверяйте историю её замены.</p></li>
+<li id="ownership-14" class="note"><p>Приоритет обслуживания: шины, мотор, жидкость, колодки и диски. Интервалы уточняйте по конкретному автомобилю.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#engines" data-chapter="engines" class="previous-chapter" aria-label="Предыдущая глава: Двигатели"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Двигатели</span></a>
+        <a href="#transmission" data-chapter="transmission" class="next-chapter"><span>Дальше: Трансмиссия</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="transmission" aria-labelledby="title-transmission">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 2 из 9</span><span>13 заметок</span></div>
+        <h3 id="title-transmission" tabindex="-1">Коробка передач и сцепление</h3>
+        <p>Как передачи и сцепление работают при движении и остановке.</p>
+      </header>
+      <section class="note-group"><h4>Как устроено</h4><ul><li id="transmission-01" class="note"><p>Передачи согласуют двигатель с колёсами: низкие: для трогания, высокие: для скорости.</p></li>
+<li id="transmission-02" class="note"><p>Сцепление разъединяет двигатель и трансмиссию для остановки с работающим мотором.</p></li>
+<li id="transmission-03" class="note"><p>В механике передачи выбирает водитель; в автоматических трансмиссиях: автомобиль.</p></li>
+<li id="transmission-04" class="note"><p>Сцепление передаёт момент трением; плавное отпускание педали постепенно уравнивает скорости вращения деталей.</p></li>
+<li id="transmission-13" class="note"><p>Гидротрансформатор передаёт момент через жидкость; задняя передача разворачивает вращение выходного звена, а не двигателя.</p></li></ul></section><section class="note-group"><h4>Повседневная работа</h4><ul><li id="transmission-05" class="note"><p>Резкое отпускание создаёт рывки и ударные нагрузки: сцепление нужно отпускать контролируемо.</p></li>
+<li id="transmission-06" class="note"><p>Пробуксовка перегревает сцепление; рост оборотов без разгона: повод для диагностики.</p></li>
+<li id="transmission-07" class="note"><p>Автор советует при длительном ожидании выбирать нейтраль, отпуская сцепление; объясняет нагрузку на выжимной подшипник.</p></li>
+<li id="transmission-08" class="note"><p>Автор не рекомендует постоянно переключать автомат D/N на светофорах; учитывать руководство конкретного автомобиля.</p></li>
+<li id="transmission-09" class="note"><p>На передаче с отпущенным газом подача топлива может прекращаться; нейтраль не гарантирует экономии.</p></li></ul></section><section class="note-group"><h4>Особые ситуации</h4><ul><li id="transmission-10" class="note"><p>Разбирается торможение двигателем и согласование понижений; технику отрабатывать с инструктором.</p></li>
+<li id="transmission-11" class="note"><p>Смазка и буксировка автоматов: проверить ограничения производителя; при неизвестных условиях выбрать эвакуатор.</p></li>
+<li id="transmission-12" class="note"><p>Обсуждаются защиты от ошибочного включения заднего хода; проверять их экспериментом нельзя.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#ownership" data-chapter="ownership" class="previous-chapter" aria-label="Предыдущая глава: Владение"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Владение</span></a>
+        <a href="#visibility" data-chapter="visibility" class="next-chapter"><span>Дальше: Обзор и тормоза</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="visibility" aria-labelledby="title-visibility">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 3 из 9</span><span>13 заметок</span></div>
+        <h3 id="title-visibility" tabindex="-1">Вентиляция, дворники и тормоза</h3>
+        <p>Что проверить при запотевании, плохой очистке стекла и шуме.</p>
+      </header>
+      <section class="note-group"><h4>Салон и состояние машины</h4><ul><li id="visibility-01" class="note"><p>Запотевание возникает, когда влага из воздуха конденсируется на холодном стекле.</p></li>
+<li id="visibility-02" class="note"><p>Вентиляции нужны приток и выход воздуха. При духоте сзади проверить выпускные отверстия и клапаны кузова.</p></li>
+<li id="visibility-03" class="note"><p>Загрязнённый салонный фильтр уменьшает поток; обслуживать фильтр, кондиционер и вентиляцию. Запах сырости требует поиска причины.</p></li>
+<li id="visibility-04" class="note"><p>Кондиционер осушает воздух и помогает убрать запотевание; конденсат под работающей системой объясняется этим процессом.</p></li>
+<li id="visibility-05" class="note"><p>Для первой машины автор предпочитает умеренную цену, исправность, проверенную историю.</p></li></ul></section><section class="note-group"><h4>Стекло и дворники</h4><ul><li id="visibility-06" class="note"><p>Щётке нужны подходящая геометрия, целая резинка и равномерный прижим.</p></li>
+<li id="visibility-07" class="note"><p>Песок, сколы и трещины повреждают стекло и ускоряют износ щёток.</p></li>
+<li id="visibility-08" class="note"><p>Если новые дворники не помогают, проверить стекло, поводки и прижимные пружины.</p></li></ul></section><section class="note-group"><h4>Тормоза и помощники</h4><ul><li id="visibility-09" class="note"><p>Суппорт прижимает колодки к диску; энергия движения превращается в тепло, фрикционный материал изнашивается.</p></li>
+<li id="visibility-10" class="note"><p>Постоянный шум требует диагностики. При скрежете либо ухудшении торможения безопасно остановиться и организовать проверку.</p></li>
+<li id="visibility-11" class="note"><p>ABS препятствует блокировке колёс, сохраняя возможность управлять при торможении.</p></li>
+<li id="visibility-12" class="note"><p>Электроника не компенсирует неподходящую скорость, плохие шины и недостаточную дистанцию.</p></li>
+<li id="visibility-13" class="note"><p>Не отключать штатные системы безопасности извлечением предохранителей или переделками.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#transmission" data-chapter="transmission" class="previous-chapter" aria-label="Предыдущая глава: Трансмиссия"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Трансмиссия</span></a>
+        <a href="#safety" data-chapter="safety" class="next-chapter"><span>Дальше: Безопасность</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="safety" aria-labelledby="title-safety">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 4 из 9</span><span>13 заметок</span></div>
+        <h3 id="title-safety" tabindex="-1">Безопасность и топливо</h3>
+        <p>Ремни, груз, электронные помощники, действия после столкновения и топливо.</p>
+      </header>
+      <section class="note-group"><h4>До поездки</h4><ul><li id="safety-01" class="note"><p>При столкновении движется и тело человека; ремни и подушки уменьшают последствия резкой остановки.</p></li>
+<li id="safety-02" class="note"><p>Объёмная одежда мешает плотному прилеганию ремня; особенно внимательно проверяйте фиксацию детей.</p></li>
+<li id="safety-03" class="note"><p>Летящие вещи опасны; багажная шторка не заменяет креплений.</p></li>
+<li id="safety-08" class="note"><p>Закрепляйте багаж и предметы; используйте предусмотренные крепления.</p></li>
+<li id="safety-09" class="note"><p>ABS препятствует блокировке колёс; ESP помогает стабилизации, регулируя тягу и тормозя отдельные колёса.</p></li>
+<li id="safety-10" class="note"><p>Постоянная индикация неисправности ABS/ESP требует диагностики; электронные помощники не устраняют предел сцепления.</p></li>
+<li id="safety-11" class="note"><p>На скользком покрытии избегайте резких действий, снижайте скорость заранее.</p></li></ul></section><section class="note-group"><h4>После столкновения</h4><ul><li id="safety-04" class="note"><p>После ДТП оцените состояние и угрозы; паническое выбегание опасно.</p></li>
+<li id="safety-05" class="note"><p>Взвесь после раскрытия подушек возможна; считать дым безопасным нельзя.</p></li>
+<li id="safety-06" class="note"><p>При перевороте отстёгивание без опоры может привести к падению на голову.</p></li>
+<li id="safety-07" class="note"><p>Помните о повторном столкновении; выбирайте безопасное место вне потока.</p></li></ul></section><section class="note-group"><h4>На заправке</h4><ul><li id="safety-12" class="note"><p>Октановое число связано с сопротивлением детонации; бензиновое и дизельное топливо рассчитаны на разные двигатели. Соблюдайте требования машины; учитывайте сезонность дизтоплива.</p></li>
+<li id="safety-13" class="note"><p>Перепутали бензин и дизель: прекратите заправку, не запускайте двигатель, не включайте зажигание; обращайтесь за эвакуацией и обслуживанием.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#visibility" data-chapter="visibility" class="previous-chapter" aria-label="Предыдущая глава: Обзор и тормоза"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Обзор и тормоза</span></a>
+        <a href="#driving" data-chapter="driving" class="next-chapter"><span>Дальше: На дороге</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="driving" aria-labelledby="title-driving">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 5 из 9</span><span>14 заметок</span></div>
+        <h3 id="title-driving" tabindex="-1">Как снизить риск ДТП</h3>
+        <p>Подготовка автомобиля, внимание и запас пространства помогают снижать риски.</p>
+      </header>
+      <section class="note-group"><h4>Подготовить машину и навыки</h4><ul><li id="driving-02" class="note"><p>Проверять колодки, диски, стояночный тормоз; устранять неисправности, выбирать качественные детали.</p></li>
+<li id="driving-03" class="note"><p>Шины: сезонность, протектор, вздутия, трещины; давление: по табличке автомобиля.</p></li>
+<li id="driving-04" class="note"><p>Проверять свет, коррозию конструкций, ошибки ABS/ESP; восстанавливать обзор, менять щётки, возить омыватель.</p></li>
+<li id="driving-05" class="note"><p>Торможение, руление, посадку и экстренные манёвры отрабатывать с инструктором.</p></li></ul></section><section class="note-group"><h4>Сохранять внимание</h4><ul><li id="driving-01" class="note"><p>Правота не защищает от чужой ошибки; снижать риски.</p></li>
+<li id="driving-06" class="note"><p>Соблюдать ПДД; убрать телефон, общаться после безопасной остановки.</p></li>
+<li id="driving-07" class="note"><p>При сильных эмоциях или сонливости: остановиться и восстановиться.</p></li>
+<li id="driving-13" class="note"><p>Предвидеть ошибки; уступать агрессивным, сообщать о предполагаемом пьяном водителе, осторожно пересекать перекрёстки.</p></li>
+<li id="driving-14" class="note"><p>Рано замечать торможение впереди; не провоцировать и не «воспитывать» других водителей.</p></li></ul></section><section class="note-group"><h4>Оставлять запас</h4><ul><li id="driving-08" class="note"><p>Ориентир автора: три секунды при хороших условиях; в плохих увеличивать, после вклинивания восстанавливать запас.</p></li>
+<li id="driving-09" class="note"><p>Заранее сигнализировать, перестраиваться последовательно; проверять слепые зоны и избегать чужих.</p></li>
+<li id="driving-10" class="note"><p>Останавливаться вне потока; после происшествия учитывать риск повторного наезда, уходить в безопасность.</p></li>
+<li id="driving-11" class="note"><p>Не обгонять при сомнениях, не объезжать по обочине; пропущенный съезд принять спокойно.</p></li>
+<li id="driving-12" class="note"><p>В дождь/снег снижать скорость, увеличивать запас; помнить о скользкой разметке и невидимом льде.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#safety" data-chapter="safety" class="previous-chapter" aria-label="Предыдущая глава: Безопасность"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Безопасность</span></a>
+        <a href="#winter" data-chapter="winter" class="next-chapter"><span>Дальше: Зима</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="winter" aria-labelledby="title-winter">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 6 из 9</span><span>13 заметок</span></div>
+        <h3 id="title-winter" tabindex="-1">Зимнее вождение</h3>
+        <p>Меняющееся покрытие, холод и темнота требуют подготовки к поездке.</p>
+      </header>
+      <section class="note-group"><h4>На зимней дороге</h4><ul><li id="winter-01" class="note"><p>Задача водителя: безопасно довезти людей.</p></li>
+<li id="winter-02" class="note"><p>Асфальт, снежная каша, укатанный снег и лёд сменяются: переоценивать сцепление.</p></li>
+<li id="winter-03" class="note"><p>Проверить зимние шины: протектор, возраст, затвердевание и повреждения; изношенный комплект заменить.</p></li>
+<li id="winter-04" class="note"><p>Выбор шипов или фрикционных шин зависит от маршрутов и климата. Не смешивать разные сезонные типы на осях.</p></li>
+<li id="winter-05" class="note"><p>Разрешённая скорость не гарантирует безопасности: выбирать скорость по покрытию, видимости, управляемости.</p></li>
+<li id="winter-13" class="note"><p>Развивать навыки зимнего управления на оборудованном полигоне с инструктором; обычный пробег не заменяет тренировок.</p></li></ul></section><section class="note-group"><h4>Техника к сезону</h4><ul><li id="winter-06" class="note"><p>Поломка зимой опасна холодом. Проверить подходящее по инструкции масло, охлаждающую жидкость и состояние патрубков.</p></li>
+<li id="winter-07" class="note"><p>Устранить неисправности ABS и ESP; не игнорировать предупреждения.</p></li>
+<li id="winter-08" class="note"><p>Учитывать грязные фары и плохо заметных пешеходов; проверить свет, поворотники, габариты и отражатели.</p></li></ul></section><section class="note-group"><h4>Салон и запас в дороге</h4><ul><li id="winter-09" class="note"><p>Пристёгиваться всем; объёмный пуховик мешает ремню плотно прилегать к телу.</p></li>
+<li id="winter-10" class="note"><p>Обувь должна позволять чувствовать педали; подходящие закреплённые коврики не должны мешать их ходу.</p></li>
+<li id="winter-11" class="note"><p>Возить запас незамерзайки, щётку, запасные дворники, запаску/насос; за город: тёплую одежду, одноразовые грелки.</p></li>
+<li id="winter-12" class="note"><p>Иметь подходящий трос и лопату; заранее найти штатные крепления и буксировочную проушину.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#driving" data-chapter="driving" class="previous-chapter" aria-label="Предыдущая глава: На дороге"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">На дороге</span></a>
+        <a href="#position" data-chapter="position" class="next-chapter"><span>Дальше: Посадка</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="position" aria-labelledby="title-position">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 7 из 9</span><span>14 заметок</span></div>
+        <h3 id="title-position" tabindex="-1">Посадка и вопросы эксплуатации</h3>
+        <p>Посадка, доступ к органам управления и привычки в автомобиле.</p>
+      </header>
+      <section class="note-group"><h4>Настроить посадку</h4><ul><li id="position-01" class="note"><p>Обеспечить доступность тормоза: сидеть ровно, без перекоса таза, свободно переносить ногу.</p></li>
+<li id="position-02" class="note"><p>На припаркованной и зафиксированной машине проверить нажатие: нога согнута, таз неподвижен.</p></li>
+<li id="position-03" class="note"><p>Левую ногу держать на площадке; после работы сцеплением возвращать туда.</p></li>
+<li id="position-04" class="note"><p>Хват «9 и 3»; настроить руль и спинку, сохраняя опору плеч при повороте.</p></li>
+<li id="position-05" class="note"><p>Автор рекомендует толкающее руление, взгляд в поворот; рука поверх руля опасна при раскрытии подушки.</p></li></ul></section><section class="note-group"><h4>Навыки и безопасность</h4><ul><li id="position-06" class="note"><p>Реакции на потерю сцепления отрабатывать на полигоне: чтение советов не создаёт навыка.</p></li>
+<li id="position-07" class="note"><p>Результат одновременного нажатия педалей зависит от конструкции; не экспериментировать.</p></li>
+<li id="position-08" class="note"><p>Укачивание автор объясняет конфликтом зрительных и вестибулярных сигналов; предлагает смотреть вдаль вместо экрана.</p></li>
+<li id="position-09" class="note"><p>После аварии автор советует тренировки; при необходимости: психолога.</p></li>
+<li id="position-10" class="note"><p>Рабочий тормоз замедляет автомобиль; стояночный удерживает припаркованную машину.</p></li>
+<li id="position-11" class="note"><p>Детское кресло против хода нельзя размещать перед активной фронтальной подушкой; изучить инструкции автомобиля и кресла.</p></li>
+<li id="position-12" class="note"><p>Отключение стабилизации обсуждается для освобождения застрявшей машины, не для обычной езды.</p></li></ul></section><section class="note-group"><h4>Заправка</h4><ul><li id="position-13" class="note"><p>Аккуратно вынимать пистолет; пролитое топливо удалять.</p></li>
+<li id="position-14" class="note"><p>Отсечка подачи работает механически; после заправки и оплаты освобождать колонку.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#winter" data-chapter="winter" class="previous-chapter" aria-label="Предыдущая глава: Зима"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Зима</span></a>
+        <a href="#suspension" data-chapter="suspension" class="next-chapter"><span>Дальше: Подвеска</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="suspension" aria-labelledby="title-suspension">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 8 из 9</span><span>13 заметок</span></div>
+        <h3 id="title-suspension" tabindex="-1">Подвеска, стуки и компоновка</h3>
+        <p>Устройство подвески помогает понимать шумы и задачи диагностики машины.</p>
+      </header>
+      <section class="note-group"><h4>Как устроено</h4><ul><li id="suspension-02" class="note"><p>Подвеска смягчает дорожные воздействия; пружины воспринимают нагрузку и запасают энергию при сжатии.</p></li>
+<li id="suspension-03" class="note"><p>Амортизаторы гасят колебания. Они согласованы с пружинами и конструкцией машины.</p></li>
+<li id="suspension-05" class="note"><p>Рычаги направляют перемещение колеса относительно кузова.</p></li>
+<li id="suspension-07" class="note"><p>Опоры двигателя ограничивают передачу вибраций кузову; их износ способен усиливать тряску.</p></li></ul></section><section class="note-group"><h4>Износ и диагностика</h4><ul><li id="suspension-01" class="note"><p>Источники шумов: подвеска, рулевое управление, двигатель, трансмиссия; звук сам по себе не диагноз.</p></li>
+<li id="suspension-04" class="note"><p>Пружины могут просесть или сломаться; амортизаторы: потерять герметичность и эффективность.</p></li>
+<li id="suspension-06" class="note"><p>Износ сайлентблоков и соединений подвески либо рулевого управления может вызывать люфты и стуки.</p></li>
+<li id="suspension-08" class="note"><p>Новые стуки и вибрации требуют диагностики: неисправный элемент увеличивает нагрузки на соседние.</p></li>
+<li id="suspension-09" class="note"><p>У старой или плохо восстановленной машины учитывайте состояние соединений и общий бюджет восстановления.</p></li>
+<li id="suspension-10" class="note"><p>Автор предпочитает оригинальные детали; существенны соответствие характеристик и проверка причины оставшегося шума после ремонта.</p></li></ul></section><section class="note-group"><h4>Компоновка</h4><ul><li id="suspension-11" class="note"><p>Продольное и поперечное расположение двигателя определяют размещение трансмиссии, стоимость и занимаемое пространство.</p></li>
+<li id="suspension-12" class="note"><p>Продольная схема обычно предоставляет больше места крупным агрегатам; это тенденция, не универсальное правило.</p></li>
+<li id="suspension-13" class="note"><p>Управляемость зависит от всей конструкции. Важнее свойства конкретной машины, чем престиж компоновки.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#position" data-chapter="position" class="previous-chapter" aria-label="Предыдущая глава: Посадка"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Посадка</span></a>
+        <a href="#engines" data-chapter="engines" class="next-chapter"><span>Дальше: Двигатели</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article>
+<article class="chapter" id="engines" aria-labelledby="title-engines">
+      <header class="chapter-heading">
+        <div class="chapter-meta"><span>Глава 9 из 9</span><span>14 заметок</span></div>
+        <h3 id="title-engines" tabindex="-1">Виды силовых установок</h3>
+        <p>Разные силовые установки сочетают отдачу, расход и особенности обслуживания.</p>
+      </header>
+      <section class="note-group"><h4>Атмосферный двигатель и наддув</h4><ul><li id="engines-01" class="note"><p>Атмосферный ДВС: сгорание двигает поршни и коленвал; воздух поступает без принудительного наддува.</p></li>
+<li id="engines-02" class="note"><p>Плюсы атмосферника, по автору: простота и обслуживание.</p></li>
+<li id="engines-03" class="note"><p>Компромисс: меньшая мощность с литра.</p></li>
+<li id="engines-04" class="note"><p>Развитие двигателей: увеличение отдачи топлива, уменьшение потерь.</p></li>
+<li id="engines-05" class="note"><p>Механический компрессор нагнетает воздух, забирая энергию двигателя.</p></li>
+<li id="engines-06" class="note"><p>Компрессор улучшает отдачу и отклик, но добавляет размеры, нагрузку, детали и потери на привод.</p></li>
+<li id="engines-12" class="note"><p>Турбокомпрессор использует энергию выхлопа для наддува.</p></li>
+<li id="engines-13" class="note"><p>Предпочтение турбомотора: оценка автора. Ресурс и стоимость проверяйте по конкретной модели.</p></li>
+<li id="engines-14" class="note"><p>Для турбомотора особенно важны подходящие масло, топливо, охлаждение и обслуживание; интенсивный разгон повышает расход.</p></li></ul></section><section class="note-group"><h4>Дизель</h4><ul><li id="engines-07" class="note"><p>В дизеле топливо воспламеняется в воздухе, нагретом сильным сжатием.</p></li>
+<li id="engines-08" class="note"><p>Обсуждаются экономичность и тяга дизеля, шум, вибрации, сложность современной топливной аппаратуры; важны топливо и квалифицированное обслуживание.</p></li></ul></section><section class="note-group"><h4>Электропривод и гибриды</h4><ul><li id="engines-09" class="note"><p>Электропривод эффективен, тих и мощен; учитывайте батарею, массу, запас хода и доступность зарядки.</p></li>
+<li id="engines-10" class="note"><p>Параллельная схема допускает привод колёс от ДВС и электромотора; последовательная использует ДВС как источник электричества.</p></li>
+<li id="engines-11" class="note"><p>Гибрид позволяет продолжать путь на топливе, объединяя два привода; оценивайте сложность обслуживания.</p></li></ul></section>
+      <nav class="chapter-pager" aria-label="Навигация между главами">
+        <a href="#suspension" data-chapter="suspension" class="previous-chapter" aria-label="Предыдущая глава: Подвеска"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-left.svg)"></span><span class="previous-label">Подвеска</span></a>
+        <a href="#ownership" data-chapter="ownership" class="next-chapter"><span>Дальше: Владение</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/arrow-right.svg)"></span></a>
+      </nav>
+    </article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="checklist-section" id="checklist" aria-labelledby="checklist-title">
+      <div class="checklist-layout wrap">
+        <div class="checklist-intro">
+          <span class="checklist-symbol" aria-hidden="true"><span class="icon" style="--icon:url(assets/icons/check-square.svg)"></span></span>
+          <h2 id="checklist-title">Прочитал?<br>Теперь проверь.</h2>
+          <p>Знания становятся полезными, когда превращаются в действия. Отметь то, что уже сделано.</p>
+          <div class="checklist-status" role="status" aria-live="polite"><strong id="check-count">0</strong><span>из 9 пунктов готово</span></div>
+          <p class="storage-note">Отметки сохраняются в этом браузере.</p>
+          <div class="checklist-controls"><button class="text-button" id="reset-checklist" type="button">Сбросить отметки</button><button class="text-button print-button" type="button"><span class="icon" style="--icon:url(assets/icons/printer.svg)" aria-hidden="true"></span>Распечатать</button></div>
+          <img class="cockpit-photo" src="assets/cockpit.webp" width="1536" height="1024" loading="lazy" alt="Кожаный руль и рычаг механической коробки передач">
+        </div>
+        <div class="checklist-items"><label class="check-item" for="check-check-ownership">
+  <input type="checkbox" id="check-check-ownership" data-check="check-ownership">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Вести журнал обслуживания и состояния шин.</span>
+</label>
+<label class="check-item" for="check-check-transmission">
+  <input type="checkbox" id="check-check-transmission" data-check="check-transmission">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Проверить правила эксплуатации и буксировки своей трансмиссии.</span>
+</label>
+<label class="check-item" for="check-check-visibility">
+  <input type="checkbox" id="check-check-visibility" data-check="check-visibility">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Устранить проблемы обзора, вентиляции и тормозов.</span>
+</label>
+<label class="check-item" for="check-check-safety">
+  <input type="checkbox" id="check-check-safety" data-check="check-safety">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Закрепить груз, пристегнуть всех, проверить подходящий тип топлива.</span>
+</label>
+<label class="check-item" for="check-check-driving">
+  <input type="checkbox" id="check-check-driving" data-check="check-driving">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Убрать телефон; соблюдать дистанцию; не ехать сонным.</span>
+</label>
+<label class="check-item" for="check-check-winter">
+  <input type="checkbox" id="check-check-winter" data-check="check-winter">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Подготовить машину и аварийный комплект к зиме.</span>
+</label>
+<label class="check-item" for="check-check-position">
+  <input type="checkbox" id="check-check-position" data-check="check-position">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Настроить посадку, ремни и детское кресло.</span>
+</label>
+<label class="check-item" for="check-check-suspension">
+  <input type="checkbox" id="check-check-suspension" data-check="check-suspension">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Диагностировать новые шумы и проверить результат ремонта.</span>
+</label>
+<label class="check-item" for="check-check-engines">
+  <input type="checkbox" id="check-check-engines" data-check="check-engines">
+  <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+  <span class="check-text">Обслуживать двигатель по требованиям конкретной модели.</span>
+</label></div>
+      </div>
+    </section>
+
+    <section class="safety-section wrap" aria-labelledby="safety-title">
+      <div class="safety-intro"><h2 id="safety-title">Три важных уточнения.</h2><p>В вопросах безопасности детали имеют значение.</p></div>
+      <div class="safety-notes"><details class="safety-note"><summary>Шторка багажника не заменяет крепление груза<span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary><p>Volvo описывает её как средство скрыть вещи от взгляда и отдельно требует закреплять предметы. Вывод: закрытая шторка сама по себе не означает, что груз безопасно удержится при ударе. На неё также нельзя складывать вещи.</p></details>
+<details class="safety-note"><summary>ABS и ESC решают разные задачи<span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary><p>ABS предотвращает блокировку колёс при торможении, помогая сохранить управление; ESC помогает противодействовать заносу. ABS не гарантирует более короткий тормозной путь на любом покрытии: Volkswagen прямо оговаривает возможное увеличение на гравии и некоторых снежных покрытиях.</p></details>
+<details class="safety-note"><summary>Дым после столкновения нельзя автоматически считать безобидной пылью подушек<span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary><p>Volvo подтверждает, что сработавшие подушки могут выделять дым, но одновременно требует следить за признаками пожара. По одному наличию сработавшей подушки исключать пожар нельзя; дым и пыль также могут раздражать глаза и кожу.</p></details></div>
+    </section>
+
+    <section class="about-section wrap" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">Полезное всегда под рукой.</h2>
+      <div class="about-copy">
+        <p>«Бардачок» собирает базовые знания об автомобиле в одном месте. Основа справочника: конспект девяти выпусков Стаса Асафьева об устройстве, обслуживании и безопасном вождении.</p>
+        <p>Это независимый проект. Для конкретных регламентов и процедур сверяйся с руководством своей машины. Юридические пояснения в разделе о владении относятся к России на момент записи.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="brand footer-brand" href="#top">бардачок<span class="brand-period">.</span></a>
+    <span>Разбираться полезно. Спрашивать нормально.</span>
+    <a href="https://github.com/lonagi/bardachok" target="_blank" rel="noopener noreferrer">Проект на GitHub<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+  </footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <div class="search-dialog-header"><h2 id="search-title">Что хочется понять?</h2><button class="icon-button" type="button" data-close-search aria-label="Закрыть поиск"><span class="icon" style="--icon:url(assets/icons/x.svg)" aria-hidden="true"></span></button></div>
+    <label class="search-input-label" for="guide-search">Поиск по всему справочнику</label>
+    <div class="search-input-wrap"><span class="icon" style="--icon:url(assets/icons/magnifying-glass.svg)" aria-hidden="true"></span><input id="guide-search" type="search" autocomplete="off" placeholder="Например, масло, тормоза или шины" aria-describedby="search-status"></div>
+    <p id="search-status" role="status" aria-live="polite">Начни вводить слово или выбери тему.</p>
+    <div id="search-results"></div>
+    <div class="search-dialog-footer"><span>Поиск по 121 заметке</span><span><kbd>Esc</kbd> закрыть</span></div>
+  </dialog>
+  <noscript><style>.header-actions,.mobile-chapter-picker,.chapter-pager,.checklist-controls,.checklist-status,.storage-note{display:none!important}</style></noscript>
+</body>
+</html>

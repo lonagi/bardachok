@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f5f2">
+  <title>Бардачок • Понимать машину. Ездить спокойнее.</title>
+  <meta name="description" content="Понятный справочник об автомобиле: устройство, обслуживание, зимнее вождение и безопасность. Девять тем, 121 заметка и личная памятка проверок.">
+  <meta property="og:title" content="Бардачок. Полезное о машине всегда под рукой.">
+  <meta property="og:description" content="От первой машины до устройства двигателя. Понятный справочник с поиском и памяткой проверок.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://lonagi.github.io/bardachok/">
+  <meta property="og:image" content="https://lonagi.github.io/bardachok/assets/hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://lonagi.github.io/bardachok/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+  <script>
+    try { const choice = localStorage.getItem('bardachok-theme'); document.documentElement.dataset.theme = choice || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (_) {}
+  </script>
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#guide">Перейти к справочнику</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#top" aria-label="Бардачок, в начало">
+        <span class="brand-mark" aria-hidden="true"><span class="icon" style="--icon:url(assets/icons/steering-wheel.svg)"></span></span>
+        <span>бардачок<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#guide">Справочник</a>
+        <a href="#checklist">Памятка</a>
+        <a href="#about">О проекте</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-trigger" type="button" data-open-search aria-label="Поиск по справочнику" aria-haspopup="dialog" aria-controls="search-dialog">
+          <span class="icon" style="--icon:url(assets/icons/magnifying-glass.svg)" aria-hidden="true"></span><span class="search-label">Найти</span><kbd>/</kbd>
+        </button>
+        <button class="icon-button theme-button" type="button" aria-label="Включить тёмную тему" title="Переключить тему">
+          <span class="icon theme-moon" style="--icon:url(assets/icons/moon.svg)" aria-hidden="true"></span>
+          <span class="icon theme-sun" style="--icon:url(assets/icons/sun.svg)" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Справочник нормального водителя</p>
+        <h1 id="hero-title">Понимать машину. <span>Ездить спокойнее.</span></h1>
+        <p class="hero-description">Что происходит под капотом, что проверять перед дорогой и о чём спросить в сервисе. Простыми словами.</p>
+        <a class="button button-primary" href="#guide">Открыть справочник<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/hero.webp" alt="Серебристое купе в светлом автомобильном гараже" width="1536" height="1024" fetchpriority="high">
+      </figure>
+    </section>
+
+    <div class="quick-start wrap" aria-label="Быстрый переход к ситуации">
+      <p>С чего начнём?</p>
+      <a href="#ownership" data-chapter="ownership">Первая машина<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      <a href="#suspension" data-chapter="suspension">Что-то стучит<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      <a href="#winter" data-chapter="winter">Скоро зима<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+      <a href="#checklist">Проверить главное<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+    </div>
+
+    <section class="guide-section wrap" id="guide" aria-labelledby="guide-title">
+      <div class="section-intro">
+        <h2 id="guide-title">Всё по полочкам<span class="accent">.</span></h2>
+        <p>Девять тем. Читай по порядку или открывай то, что нужно сейчас.</p>
+      </div>
+      <div class="guide-layout">
+        <aside class="contents" aria-label="Содержание справочника">
+          <div class="contents-inner">
+            <span class="contents-label">Содержание</span>
+            <nav class="chapter-navigation" aria-label="Темы">%%NAVIGATION%%</nav>
+            <a class="download-link" href="guide.md" download="Бардачок-конспект.md"><span class="icon" style="--icon:url(assets/icons/download-simple.svg)" aria-hidden="true"></span>Скачать конспект</a>
+            <div class="sidebar-note"><span class="icon" style="--icon:url(assets/icons/bookmark-simple.svg)" aria-hidden="true"></span><p>К хорошим привычкам удобно возвращаться.</p></div>
+          </div>
+        </aside>
+        <div class="reader">
+          <div class="mobile-chapter-picker">
+            <label for="chapter-select">Выбрать тему</label>
+            <div class="select-wrapper"><select id="chapter-select">%%OPTIONS%%</select><span class="icon" style="--icon:url(assets/icons/caret-down.svg)" aria-hidden="true"></span></div>
+          </div>
+          <div id="chapters">%%CHAPTERS%%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="checklist-section" id="checklist" aria-labelledby="checklist-title">
+      <div class="checklist-layout wrap">
+        <div class="checklist-intro">
+          <span class="checklist-symbol" aria-hidden="true"><span class="icon" style="--icon:url(assets/icons/check-square.svg)"></span></span>
+          <h2 id="checklist-title">Прочитал?<br>Теперь проверь.</h2>
+          <p>Знания становятся полезными, когда превращаются в действия. Отметь то, что уже сделано.</p>
+          <div class="checklist-status" role="status" aria-live="polite"><strong id="check-count">0</strong><span>из 9 пунктов готово</span></div>
+          <p class="storage-note">Отметки сохраняются в этом браузере.</p>
+          <div class="checklist-controls"><button class="text-button" id="reset-checklist" type="button">Сбросить отметки</button><button class="text-button print-button" type="button"><span class="icon" style="--icon:url(assets/icons/printer.svg)" aria-hidden="true"></span>Распечатать</button></div>
+          <img class="cockpit-photo" src="assets/cockpit.webp" width="1536" height="1024" loading="lazy" alt="Кожаный руль и рычаг механической коробки передач">
+        </div>
+        <div class="checklist-items">%%CHECKLIST%%</div>
+      </div>
+    </section>
+
+    <section class="safety-section wrap" aria-labelledby="safety-title">
+      <div class="safety-intro"><h2 id="safety-title">Три важных уточнения.</h2><p>В вопросах безопасности детали имеют значение.</p></div>
+      <div class="safety-notes">%%SAFETY%%</div>
+    </section>
+
+    <section class="about-section wrap" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">Полезное всегда под рукой.</h2>
+      <div class="about-copy">
+        <p>«Бардачок» собирает базовые знания об автомобиле в одном месте. Основа справочника: конспект девяти выпусков Стаса Асафьева об устройстве, обслуживании и безопасном вождении.</p>
+        <p>Это независимый проект. Для конкретных регламентов и процедур сверяйся с руководством своей машины. Юридические пояснения в разделе о владении относятся к России на момент записи.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="brand footer-brand" href="#top">бардачок<span class="brand-period">.</span></a>
+    <span>Разбираться полезно. Спрашивать нормально.</span>
+    <a href="https://github.com/lonagi/bardachok" target="_blank" rel="noopener noreferrer">Проект на GitHub<span class="icon" style="--icon:url(assets/icons/arrow-up-right.svg)" aria-hidden="true"></span></a>
+  </footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <div class="search-dialog-header"><h2 id="search-title">Что хочется понять?</h2><button class="icon-button" type="button" data-close-search aria-label="Закрыть поиск"><span class="icon" style="--icon:url(assets/icons/x.svg)" aria-hidden="true"></span></button></div>
+    <label class="search-input-label" for="guide-search">Поиск по всему справочнику</label>
+    <div class="search-input-wrap"><span class="icon" style="--icon:url(assets/icons/magnifying-glass.svg)" aria-hidden="true"></span><input id="guide-search" type="search" autocomplete="off" placeholder="Например, масло, тормоза или шины" aria-describedby="search-status"></div>
+    <p id="search-status" role="status" aria-live="polite">Начни вводить слово или выбери тему.</p>
+    <div id="search-results"></div>
+    <div class="search-dialog-footer"><span>Поиск по 121 заметке</span><span><kbd>Esc</kbd> закрыть</span></div>
+  </dialog>
+  <noscript><style>.header-actions,.mobile-chapter-picker,.chapter-pager,.checklist-controls,.checklist-status,.storage-note{display:none!important}</style></noscript>
+</body>
+</html>
