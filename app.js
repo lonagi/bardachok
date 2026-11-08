@@ -26,6 +26,129 @@
     catch (_) { return false; }
   };
 
+  function setupCarKit({ readStorage, store } = {}) {
+    const section = document.getElementById('car-kit');
+    if (!section) return null;
+
+    const storageKey = 'bardachok-car-kit-v1';
+    const rows = new Map(
+      [...section.querySelectorAll('.kit-item')].map(row => [row.id, row])
+    );
+    const entries = [...section.querySelectorAll('input[data-kit-check]')]
+      .filter(input => input.value && input.type === 'checkbox')
+      .map(input => ({
+        input,
+        id: input.value,
+        row: rows.get(`kit-item-${input.value}`) || null,
+        group: input.closest('details[data-kit-group]')
+      }));
+    const knownIds = new Set(entries.map(entry => entry.id));
+    const entryById = new Map(entries.map(entry => [entry.id, entry]));
+    const groups = [...section.querySelectorAll('details[data-kit-group]')]
+      .map(detail => ({
+        detail,
+        entries: entries.filter(entry => entry.group === detail),
+        count: [...detail.querySelectorAll('[data-kit-group-count]')]
+          .find(element => element.closest('details[data-kit-group]') === detail),
+        empty: [...detail.querySelectorAll('.kit-group-empty')]
+          .find(element => element.closest('details[data-kit-group]') === detail)
+      }));
+    const count = section.querySelector('#kit-count');
+    const hideDone = section.querySelector('#kit-hide-done');
+    const reset = section.querySelector('#kit-reset');
+    const storageNotes = [...section.querySelectorAll('.kit-storage-note')];
+    let saveFailed = false;
+    let saved = [];
+    try {
+      saved = typeof readStorage === 'function' ? readStorage(storageKey, []) : [];
+    } catch (_) {
+      // A malformed value or unavailable storage must not stop the original site.
+    }
+    const selectedIds = new Set(
+      (Array.isArray(saved) ? saved : [])
+        .filter(id => typeof id === 'string' && knownIds.has(id))
+    );
+
+    function update(persist = true) {
+      const selected = [...new Set(entries.filter(entry => entry.input.checked).map(entry => entry.id))];
+      if (count) count.textContent = String(selected.length);
+      if (reset) reset.disabled = selected.length === 0;
+
+      const filtering = Boolean(hideDone?.checked);
+      entries.forEach(entry => {
+        if (entry.row) entry.row.hidden = filtering && entry.input.checked;
+      });
+      groups.forEach(group => {
+        const completed = group.entries.filter(entry => entry.input.checked).length;
+        if (group.count) group.count.textContent = `${completed} из ${group.entries.length}`;
+        if (group.empty) {
+          group.empty.hidden = !(filtering && group.entries.length > 0 && completed === group.entries.length);
+        }
+        // Keep the details element and its summary visible, including fully checked groups.
+      });
+
+      if (persist) {
+        try {
+          saveFailed = typeof store !== 'function' || store(storageKey, selected) !== true;
+        } catch (_) {
+          saveFailed = true;
+        }
+      }
+      const message = saveFailed
+        ? 'Не удалось сохранить изменения. Текущие отметки действуют до обновления страницы.'
+        : 'Отметки сохраняются в этом браузере.';
+      storageNotes.forEach(note => { note.textContent = message; });
+    }
+
+    entries.forEach(entry => {
+      entry.input.checked = selectedIds.has(entry.id);
+      entry.input.addEventListener('change', () => update());
+    });
+    hideDone?.addEventListener('change', () => update(false));
+    reset?.addEventListener('click', event => {
+      event.preventDefault();
+      entries.forEach(entry => { entry.input.checked = false; });
+      update();
+    });
+    document.querySelectorAll('button[data-print-kit]').forEach(button => {
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        document.documentElement.classList.add('print-kit-only');
+        try {
+          window.print();
+        } catch (_) {
+          document.documentElement.classList.remove('print-kit-only');
+        }
+        // The site's existing afterprint handler removes the class and restores details.
+      });
+    });
+
+    // Loading, filtering and revealing never overwrite saved state or probe storage.
+    update(false);
+
+    return {
+      reveal(id) {
+        if (typeof id !== 'string') return false;
+        const entry = entryById.get(id);
+        if (!entry) return false;
+        if (hideDone?.checked && entry.input.checked) {
+          hideDone.checked = false;
+          update(false);
+        }
+        let detail = entry.group;
+        while (detail && section.contains(detail)) {
+          detail.open = true;
+          detail = detail.parentElement?.closest('details[data-kit-group]') || null;
+        }
+        (entry.row || entry.input).scrollIntoView({ block: 'center', behavior: 'auto' });
+        entry.input.focus({ preventScroll: true });
+        return true;
+      }
+    };
+  }
+
+  const carKit = setupCarKit({ readStorage, store });
+
   function setChapter(id, { scroll = true, updateURL = true, focus = false, noteId = null } = {}) {
     if (!chapterIds.has(id)) return;
     activeChapter = id;
@@ -70,6 +193,9 @@
   const index = data.chapters.flatMap(chapter => chapter.groups.flatMap(group => group.items.map(item => ({
     ...item, chapter: chapter.id, chapterTitle: chapter.shortTitle,
     searchable: normalize([item.text, chapter.title, chapter.shortTitle, group.title].join(' '))
+  })))).concat((data.carKit?.groups || []).flatMap(group => group.items.map(item => ({
+    ...item, kind: 'kit', text: `${item.title}. ${item.detail}`, chapterTitle: `В машине · ${group.title}`,
+    searchable: normalize([item.title, item.detail, item.location, group.title, 'памятка в машине'].join(' '))
   }))));
 
   function highlightedText(text, terms) {
@@ -101,7 +227,7 @@
       searchStatus.textContent = 'Начни вводить слово или выбери тему.';
       const suggestions = document.createElement('div');
       suggestions.className = 'search-suggestions';
-      ['Шины', 'Тормоза', 'Масло', 'Зима', 'Сцепление', 'Подвеска'].forEach(term => {
+      ['Шины', 'Тормоза', 'Масло', 'Зима', 'Аптечка', 'Багажник'].forEach(term => {
         const button = document.createElement('button');
         button.type = 'button'; button.textContent = term;
         button.addEventListener('click', () => { searchInput.value = term; renderSearch(); searchInput.focus(); });
@@ -127,7 +253,10 @@
       button.addEventListener('click', () => {
         searchNavigating = true;
         dialog.close();
-        setChapter(item.chapter, { noteId: item.id, focus: true });
+        if (item.kind === 'kit') {
+          history.pushState({ bardachokChapter: activeChapter }, '', '#car-kit');
+          carKit?.reveal(item.id);
+        } else setChapter(item.chapter, { noteId: item.id, focus: true });
       });
       results.append(button);
     });
@@ -158,7 +287,7 @@
     }
   });
 
-  // Only checklist state and the chosen color theme are stored, locally.
+  // Checklist states and the chosen color theme stay in this browser.
   const saved = readStorage('bardachok-checks', []);
   const checked = new Set(Array.isArray(saved) ? saved : []);
   const checkboxes = [...document.querySelectorAll('[data-check]')];
@@ -177,7 +306,7 @@
   resetButton.addEventListener('click', () => { checkboxes.forEach(input => { input.checked = false; }); updateChecks(); });
   updateChecks(false);
   document.querySelector('.print-button').addEventListener('click', () => window.print());
-  const printDetails = [...document.querySelectorAll('.safety-note')];
+  const printDetails = [...document.querySelectorAll('.safety-note, .kit-group')];
   let printOpenState = [];
   window.addEventListener('beforeprint', () => {
     printOpenState = printDetails.map(detail => detail.open);
@@ -185,6 +314,7 @@
   });
   window.addEventListener('afterprint', () => {
     printDetails.forEach((detail, index) => { detail.open = printOpenState[index] ?? false; });
+    root.classList.remove('print-kit-only');
   });
 
   const themeButton = document.querySelector('.theme-button');

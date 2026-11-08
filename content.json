@@ -743,5 +743,524 @@
       "title": "Дым после столкновения нельзя автоматически считать безобидной пылью подушек.",
       "text": "Volvo подтверждает, что сработавшие подушки могут выделять дым, но одновременно требует следить за признаками пожара. По одному наличию сработавшей подушки исключать пожар нельзя; дым и пыль также могут раздражать глаза и кожу."
     }
-  ]
+  ],
+  "carKit": {
+    "intro": "Собери набор под свою машину и поездки. Отметь то, что уже есть или сделано, и возвращайся за остальным. Здесь вещи для салона и багажника, сезонные дополнения и привычки, которые помогают держать всё в порядке.",
+    "groups": [
+      {
+        "id": "essentials",
+        "title": "Базовый набор",
+        "description": "Связь, заметность, первая помощь и доступ к нужным вещам.",
+        "items": [
+          {
+            "id": "kit-first-aid",
+            "title": "Автомобильная аптечка",
+            "detail": "Закрепи аптечку в штатном месте; если его нет, выбери доступное место вне багажника легковой машины.",
+            "priority": "required",
+            "location": "Штатное место или салон",
+            "sourceIds": [
+              "nsc-kit",
+              "utah-kit",
+              "moldova-rules"
+            ]
+          },
+          {
+            "id": "kit-extinguisher",
+            "title": "Закреплённый огнетушитель",
+            "detail": "Проверь срок обслуживания и крепление. Используй штатное место; если его нет, доступное место вне багажника легковой машины.",
+            "priority": "required",
+            "location": "Штатное место или салон",
+            "sourceIds": [
+              "nsc-kit",
+              "volvo-manual",
+              "moldova-rules"
+            ]
+          },
+          {
+            "id": "kit-reflective-vest",
+            "title": "Светоотражающий жилет",
+            "detail": "Храни в салоне. Надевай до выхода для работ с остановленной на дороге машиной, в том числе днём.",
+            "priority": "required",
+            "location": "Салон",
+            "sourceIds": [
+              "nsc-kit",
+              "moldova-rules"
+            ]
+          },
+          {
+            "id": "kit-warning-triangle",
+            "title": "Аварийный знак",
+            "detail": "В Молдове нужен знак либо переносной красный мигающий фонарь. Держи его доступным даже при загруженном багажнике.",
+            "priority": "required",
+            "location": "Багажник",
+            "sourceIds": [
+              "nsc-kit",
+              "moldova-rules"
+            ]
+          },
+          {
+            "id": "kit-trip-documents",
+            "title": "Документы на поездку",
+            "detail": "Проверь действительность прав, регистрации автомобиля и страховки; подготовь нужные документы с учётом страны поездки.",
+            "priority": "essential",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "moldova-rules"
+            ]
+          },
+          {
+            "id": "kit-first-aid-dates",
+            "title": "Сроки аптечки",
+            "detail": "Проверяй сроки отдельных компонентов и целостность упаковок; использованное своевременно заменяй.",
+            "priority": "essential",
+            "location": "Проверить в машине",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          },
+          {
+            "id": "kit-phone-charger",
+            "title": "Зарядка телефона",
+            "detail": "Проверь совместимость адаптера и кабеля с телефоном и автомобильной розеткой заранее.",
+            "priority": "essential",
+            "location": "Салон",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          },
+          {
+            "id": "kit-flashlight",
+            "title": "Рабочий фонарь",
+            "detail": "Положи отдельный фонарь; регулярно проверяй питание и температурные ограничения его хранения.",
+            "priority": "essential",
+            "location": "Салон",
+            "sourceIds": [
+              "nsc-kit",
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-drinking-water",
+            "title": "Питьевая вода",
+            "detail": "Вози закрытую питьевую воду, регулярно обновляй запас; соблюдай условия хранения на упаковке.",
+            "priority": "essential",
+            "location": "Проверить в машине",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-assistance-contacts",
+            "title": "Контакты помощи",
+            "detail": "Сохрани телефоны дорожной помощи, страховщика и близких, доступные без поиска в интернете.",
+            "priority": "essential",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "roadside",
+        "title": "На случай поломки",
+        "description": "Комплект зависит от машины; ремонт требует безопасного места и навыков.",
+        "items": [
+          {
+            "id": "kit-spare-wheel",
+            "title": "Запасное колесо",
+            "detail": "Если предусмотрена запаска, проверь её состояние и давление по руководству автомобиля.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          },
+          {
+            "id": "kit-tyre-sealant",
+            "title": "Комплект ремонта шин",
+            "detail": "Если используется ремкомплект, проверь срок герметика; заранее прочитай ограничения и инструкцию.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-jack-wheel-wrench",
+            "title": "Домкрат и баллонник",
+            "detail": "При наличии запаски проверь комплектность подходящих инструментов; порядок применения смотри в руководстве.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          },
+          {
+            "id": "kit-locking-wheel-key",
+            "title": "Ключ от секреток",
+            "detail": "Если стоят секретные болты, храни подходящий ключ вместе с колёсными инструментами.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-tyre-compressor",
+            "title": "Компрессор с манометром",
+            "detail": "Проверь совместимость питания; нужное давление бери из таблички автомобиля или руководства.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-work-gloves",
+            "title": "Рабочие перчатки",
+            "detail": "Подбери перчатки своего размера для грязных вещей и обращения с багажом.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-rain-poncho",
+            "title": "Дождевик с капюшоном",
+            "detail": "Положи компактный дождевик по размеру: пригодится при вынужденной остановке в дождь.",
+            "priority": "recommended",
+            "location": "Салон",
+            "sourceIds": [
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-basic-tools",
+            "title": "Небольшой набор инструментов",
+            "detail": "Собери знакомые инструменты для простых задач; сложный ремонт оставь специалистам помощи.",
+            "priority": "optional",
+            "location": "Багажник",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          },
+          {
+            "id": "kit-jump-starter",
+            "title": "Провода или пусковое устройство",
+            "detail": "Подбери совместимое с машиной оборудование. Подключение и хранение только по инструкциям автомобиля и самого устройства.",
+            "priority": "optional",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "nsc-kit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "comfort",
+        "title": "Для удобства",
+        "description": "Небольшие вещи для чистоты, покупок и потребностей пассажиров.",
+        "items": [
+          {
+            "id": "kit-phone-holder",
+            "title": "Надёжный держатель телефона",
+            "detail": "Закрепи телефон вне зон подушек и обзора. Настрой маршрут до начала движения.",
+            "priority": "optional",
+            "location": "Салон",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-hygiene-wipes",
+            "title": "Салфетки для рук",
+            "detail": "Возьми небольшую закрывающуюся упаковку; заменяй высохшие салфетки и соблюдай условия хранения.",
+            "priority": "optional",
+            "location": "Салон",
+            "sourceIds": [
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-waste-bags",
+            "title": "Пакеты для мусора",
+            "detail": "Держи несколько пакетов для отходов и мокрых вещей; мусор регулярно выбрасывай.",
+            "priority": "optional",
+            "location": "Салон",
+            "sourceIds": [
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-microfibre-cloth",
+            "title": "Чистая микрофибра",
+            "detail": "Выдели отдельную мягкую салфетку для стекла; храни её чистой в чехле.",
+            "priority": "optional",
+            "location": "Салон",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-shopping-bags",
+            "title": "Сумки для покупок",
+            "detail": "Сложи многоразовые сумки в одно место, чтобы они не разлетались по багажнику.",
+            "priority": "optional",
+            "location": "Багажник",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-sunglasses-case",
+            "title": "Очки в футляре",
+            "detail": "Бери подходящие очки с собой; не оставляй их на раскалённой приборной панели.",
+            "priority": "optional",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-personal-medicine",
+            "title": "Личные лекарства",
+            "detail": "Бери нужные лекарства в поездку; соблюдай условия хранения и забирай после прибытия.",
+            "priority": "recommended",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-portable-battery",
+            "title": "Заряженный пауэрбанк",
+            "detail": "Бери исправный аккумулятор для поездки; не оставляй его постоянно в жаркой машине.",
+            "priority": "optional",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-road-snacks",
+            "title": "Запас перекуса",
+            "detail": "Подбери продукты длительного хранения с учётом аллергий; проверяй сроки и температурные ограничения.",
+            "priority": "recommended",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seasonal",
+        "title": "Зима и дальняя дорога",
+        "description": "Дополни набор по погоде, длительности маршрута и количеству людей.",
+        "items": [
+          {
+            "id": "kit-snow-brush",
+            "title": "Щётка и скребок",
+            "detail": "До морозов положи инструменты для очистки снега и льда со стёкол.",
+            "priority": "seasonal",
+            "location": "Багажник",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          },
+          {
+            "id": "kit-snow-shovel",
+            "title": "Компактная снеговая лопата",
+            "detail": "Для снежного маршрута возьми подходящую лопату и закрепи её в багажнике.",
+            "priority": "seasonal",
+            "location": "Багажник",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          },
+          {
+            "id": "kit-traction-grit",
+            "title": "Песок для сцепления",
+            "detail": "На снежную дорогу можно взять песок в закрытой таре для скользких участков.",
+            "priority": "seasonal",
+            "location": "Багажник",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          },
+          {
+            "id": "kit-winter-washer",
+            "title": "Зимняя омывающая жидкость",
+            "detail": "Подбери жидкость под ожидаемую температуру; запас перевози закрытым, отдельно от питьевой воды.",
+            "priority": "seasonal",
+            "location": "Багажник",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          },
+          {
+            "id": "kit-warm-clothes",
+            "title": "Сухая тёплая одежда",
+            "detail": "Возьми дополнительные слои, шапки и перчатки для каждого пассажира по погоде.",
+            "priority": "seasonal",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-warm-blankets",
+            "title": "Тёплые одеяла",
+            "detail": "Подготовь сухие одеяла для пассажиров на случай длительного ожидания помощи зимой.",
+            "priority": "seasonal",
+            "location": "Багажник",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          },
+          {
+            "id": "kit-emergency-blanket",
+            "title": "Термопокрывало в упаковке",
+            "detail": "Добавь компактное спасательное покрывало как запасной вариант; открытый огонь в салоне исключи.",
+            "priority": "seasonal",
+            "location": "Салон",
+            "sourceIds": [
+              "utah-kit"
+            ]
+          },
+          {
+            "id": "kit-offline-route",
+            "title": "Карты без интернета",
+            "detail": "Подготовь доступный без связи маршрут и сообщи близкому человеку ожидаемое время прибытия.",
+            "priority": "seasonal",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "nhtsa-winter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "storage",
+        "title": "Порядок в машине",
+        "description": "Быстрый доступ, закреплённый груз и свободные зоны безопасности.",
+        "items": [
+          {
+            "id": "kit-heavy-cargo-low",
+            "title": "Тяжёлое внизу",
+            "detail": "Расположи тяжёлые вещи низко у спинки заднего сиденья и надёжно закрепи.",
+            "priority": "essential",
+            "location": "Багажник",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-cargo-straps",
+            "title": "Ремни крепления груза",
+            "detail": "Используй предусмотренные точки крепления; проверяй натяжение ремней после изменения укладки багажа.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-fixed-organizer",
+            "title": "Закреплённый органайзер",
+            "detail": "Коробка объединяет мелочи, но не заменяет крепления; инструменты храни вне пространства под сиденьями.",
+            "priority": "recommended",
+            "location": "Багажник",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-clear-pedals",
+            "title": "Свободное место у педалей",
+            "detail": "Убери бутылки и другие предметы из водительского пространства; проверь фиксацию коврика.",
+            "priority": "essential",
+            "location": "Салон",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-clear-airbags",
+            "title": "Свободные зоны подушек",
+            "detail": "Не размещай вещи в местах раскрытия подушек; расположение уточни по руководству.",
+            "priority": "essential",
+            "location": "Салон",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-emergency-access",
+            "title": "Доступ к аварийному набору",
+            "detail": "Укладывай багаж так, чтобы аптечка, огнетушитель и аварийный знак оставались доступными.",
+            "priority": "essential",
+            "location": "Проверить в машине",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          },
+          {
+            "id": "kit-no-aerosol-storage",
+            "title": "Аэрозоли вне машины",
+            "detail": "Не храни аэрозольные баллоны постоянно в автомобиле; проверяй ограничения температуры на этикетке.",
+            "priority": "essential",
+            "location": "Брать в поездку",
+            "sourceIds": [
+              "racv-storage"
+            ]
+          },
+          {
+            "id": "kit-load-final-check",
+            "title": "Проверка уложенного багажа",
+            "detail": "Сохрани обзор, убери незакреплённые вещи; учитывай допустимую загрузку автомобиля вместе с пассажирами.",
+            "priority": "essential",
+            "location": "Проверить в машине",
+            "sourceIds": [
+              "volvo-manual"
+            ]
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "moldova-rules",
+        "title": "ПДД Молдовы, редакция от 20.09.2026: оснащение (122(6)(j)), жилет (11(d))",
+        "url": "https://www.legis.md/cautare/getResults?doc_id=153581&lang=ro"
+      },
+      {
+        "id": "nsc-kit",
+        "title": "National Safety Council: аварийный набор автомобиля",
+        "url": "https://www.nsc.org/community-safety/safety-topics/emergency-preparedness/emergency-supplies-for-car"
+      },
+      {
+        "id": "nhtsa-winter",
+        "title": "NHTSA: подготовка к зимней поездке",
+        "url": "https://www.nhtsa.gov/winter-driving-tips"
+      },
+      {
+        "id": "utah-kit",
+        "title": "Utah Emergency Management: автомобильный аварийный комплект",
+        "url": "https://dem.utah.gov/resource/vehicle-emergency-kit/"
+      },
+      {
+        "id": "volvo-manual",
+        "title": "Volvo V60: руководство, размещение груза и штатное оборудование",
+        "url": "https://www.volvocars.com/static/support-content/pdfs/uk_en-GB_v60_2026_UM_48c1c94c0281ddaa3741b439fd2a1b1e.pdf"
+      },
+      {
+        "id": "racv-storage",
+        "title": "RACV: что не стоит хранить в машине",
+        "url": "https://www.racv.com.au/royalauto/transport/cars/things-never-keep-in-car.html"
+      }
+    ]
+  }
 }

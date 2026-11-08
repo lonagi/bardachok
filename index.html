@@ -36,6 +36,7 @@
       <nav class="main-nav" aria-label="Главная навигация">
         <a href="#guide">Справочник</a>
         <a href="#checklist">Памятка</a>
+        <a href="#car-kit">В машине</a>
         <a href="#about">О проекте</a>
       </nav>
       <div class="header-actions">
@@ -326,11 +327,12 @@
       <div class="checklist-layout wrap">
         <div class="checklist-intro">
           <span class="checklist-symbol" aria-hidden="true"><span class="icon" style="--icon:url(assets/icons/check-square.svg)"></span></span>
-          <h2 id="checklist-title">Прочитал?<br>Теперь проверь.</h2>
+          <h2 id="checklist-title">Прочитал?<br> Теперь проверь.</h2>
           <p>Знания становятся полезными, когда превращаются в действия. Отметь то, что уже сделано.</p>
           <div class="checklist-status" role="status" aria-live="polite"><strong id="check-count">0</strong><span>из 9 пунктов готово</span></div>
           <p class="storage-note">Отметки сохраняются в этом браузере.</p>
           <div class="checklist-controls"><button class="text-button" id="reset-checklist" type="button">Сбросить отметки</button><button class="text-button print-button" type="button"><span class="icon" style="--icon:url(assets/icons/printer.svg)" aria-hidden="true"></span>Распечатать</button></div>
+          <a class="kit-jump" href="#car-kit">А что положить в машину?<span class="icon" style="--icon:url(assets/icons/arrow-right.svg)" aria-hidden="true"></span></a>
           <img class="cockpit-photo" src="assets/cockpit.webp" width="1536" height="1024" loading="lazy" alt="Кожаный руль и рычаг механической коробки передач">
         </div>
         <div class="checklist-items"><label class="check-item" for="check-check-ownership">
@@ -381,6 +383,224 @@
       </div>
     </section>
 
+    <section class="car-kit-section wrap" id="car-kit" aria-labelledby="car-kit-title">
+      <div class="kit-heading">
+        <div><p class="eyebrow">Личная памятка · Молдова</p><h2 id="car-kit-title">Что держать<br> в машине<span class="accent">.</span></h2></div>
+        <p>Собери набор под свою машину и поездки. Отметь то, что уже есть или сделано, и возвращайся за остальным. Здесь вещи для салона и багажника, сезонные дополнения и привычки, которые помогают держать всё в порядке.</p>
+      </div>
+      <div class="kit-layout">
+        <aside class="kit-overview" aria-label="Как пользоваться памяткой">
+          <div class="kit-progress" role="status" aria-live="polite"><strong id="kit-count">0</strong><span>из <span id="kit-total">44</span><br>пунктов отмечено</span></div>
+          <p class="kit-storage-note">Отметки сохраняются в этом браузере.</p>
+          <div class="kit-controls">
+            <label class="kit-filter" for="kit-hide-done"><input id="kit-hide-done" type="checkbox"><span>Только неотмеченные</span></label>
+            <div class="kit-actions"><button class="text-button" id="kit-reset" type="button">Сбросить этот список</button><button class="text-button" type="button" data-print-kit><span class="icon" style="--icon:url(assets/icons/printer.svg)" aria-hidden="true"></span>Печать списка</button></div>
+          </div>
+          <div class="kit-map">
+            <p class="kit-map-title">Каждой вещи своё место</p>
+            <dl><div><dt>В салоне</dt><dd>То, что нужно быстро достать: жилет, фонарь, зарядка.</dd></div><div><dt>В багажнике</dt><dd>Тяжёлое внизу и закреплено. Аварийный набор доступен без полной разгрузки.</dd></div><div><dt>С собой</dt><dd>Документы, телефон, лекарства. Забирай из припаркованной машины.</dd></div></dl>
+          </div>
+          <p class="kit-priority-note"><strong>«Обязательно · Молдова»</strong> отмечает требования к оснащению легковой машины. <strong>«База»</strong> означает практический минимум. Остальное выбирай под свои поездки.</p>
+        </aside>
+        <div class="kit-groups"><details class="kit-group" data-kit-group="essentials" open>
+      <summary><span class="kit-group-number">01</span><span class="kit-group-name">Базовый набор</span><span data-kit-group-count>0 из 10</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary>
+      <div class="kit-group-body"><p class="kit-group-description">Связь, заметность, первая помощь и доступ к нужным вещам.</p><div class="kit-items"><label class="kit-item" id="kit-item-kit-first-aid" for="kit-check-kit-first-aid">
+          <input type="checkbox" id="kit-check-kit-first-aid" value="kit-first-aid" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Автомобильная аптечка</span><span class="kit-item-detail">Закрепи аптечку в штатном месте; если его нет, выбери доступное место вне багажника легковой машины.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-required">Обязательно · Молдова</span><span>Штатное место или салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-extinguisher" for="kit-check-kit-extinguisher">
+          <input type="checkbox" id="kit-check-kit-extinguisher" value="kit-extinguisher" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Закреплённый огнетушитель</span><span class="kit-item-detail">Проверь срок обслуживания и крепление. Используй штатное место; если его нет, доступное место вне багажника легковой машины.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-required">Обязательно · Молдова</span><span>Штатное место или салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-reflective-vest" for="kit-check-kit-reflective-vest">
+          <input type="checkbox" id="kit-check-kit-reflective-vest" value="kit-reflective-vest" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Светоотражающий жилет</span><span class="kit-item-detail">Храни в салоне. Надевай до выхода для работ с остановленной на дороге машиной, в том числе днём.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-required">Обязательно · Молдова</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-warning-triangle" for="kit-check-kit-warning-triangle">
+          <input type="checkbox" id="kit-check-kit-warning-triangle" value="kit-warning-triangle" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Аварийный знак</span><span class="kit-item-detail">В Молдове нужен знак либо переносной красный мигающий фонарь. Держи его доступным даже при загруженном багажнике.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-required">Обязательно · Молдова</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-trip-documents" for="kit-check-kit-trip-documents">
+          <input type="checkbox" id="kit-check-kit-trip-documents" value="kit-trip-documents" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Документы на поездку</span><span class="kit-item-detail">Проверь действительность прав, регистрации автомобиля и страховки; подготовь нужные документы с учётом страны поездки.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Брать в поездку</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-first-aid-dates" for="kit-check-kit-first-aid-dates">
+          <input type="checkbox" id="kit-check-kit-first-aid-dates" value="kit-first-aid-dates" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Сроки аптечки</span><span class="kit-item-detail">Проверяй сроки отдельных компонентов и целостность упаковок; использованное своевременно заменяй.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Проверить в машине</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-phone-charger" for="kit-check-kit-phone-charger">
+          <input type="checkbox" id="kit-check-kit-phone-charger" value="kit-phone-charger" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Зарядка телефона</span><span class="kit-item-detail">Проверь совместимость адаптера и кабеля с телефоном и автомобильной розеткой заранее.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-flashlight" for="kit-check-kit-flashlight">
+          <input type="checkbox" id="kit-check-kit-flashlight" value="kit-flashlight" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Рабочий фонарь</span><span class="kit-item-detail">Положи отдельный фонарь; регулярно проверяй питание и температурные ограничения его хранения.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-drinking-water" for="kit-check-kit-drinking-water">
+          <input type="checkbox" id="kit-check-kit-drinking-water" value="kit-drinking-water" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Питьевая вода</span><span class="kit-item-detail">Вози закрытую питьевую воду, регулярно обновляй запас; соблюдай условия хранения на упаковке.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Проверить в машине</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-assistance-contacts" for="kit-check-kit-assistance-contacts">
+          <input type="checkbox" id="kit-check-kit-assistance-contacts" value="kit-assistance-contacts" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Контакты помощи</span><span class="kit-item-detail">Сохрани телефоны дорожной помощи, страховщика и близких, доступные без поиска в интернете.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Брать в поездку</span></span></span>
+        </label></div><p class="kit-group-empty" hidden>В этом разделе всё отмечено.</p></div>
+    </details><details class="kit-group" data-kit-group="roadside" >
+      <summary><span class="kit-group-number">02</span><span class="kit-group-name">На случай поломки</span><span data-kit-group-count>0 из 9</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary>
+      <div class="kit-group-body"><p class="kit-group-description">Комплект зависит от машины; ремонт требует безопасного места и навыков.</p><div class="kit-items"><label class="kit-item" id="kit-item-kit-spare-wheel" for="kit-check-kit-spare-wheel">
+          <input type="checkbox" id="kit-check-kit-spare-wheel" value="kit-spare-wheel" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Запасное колесо</span><span class="kit-item-detail">Если предусмотрена запаска, проверь её состояние и давление по руководству автомобиля.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-tyre-sealant" for="kit-check-kit-tyre-sealant">
+          <input type="checkbox" id="kit-check-kit-tyre-sealant" value="kit-tyre-sealant" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Комплект ремонта шин</span><span class="kit-item-detail">Если используется ремкомплект, проверь срок герметика; заранее прочитай ограничения и инструкцию.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-jack-wheel-wrench" for="kit-check-kit-jack-wheel-wrench">
+          <input type="checkbox" id="kit-check-kit-jack-wheel-wrench" value="kit-jack-wheel-wrench" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Домкрат и баллонник</span><span class="kit-item-detail">При наличии запаски проверь комплектность подходящих инструментов; порядок применения смотри в руководстве.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-locking-wheel-key" for="kit-check-kit-locking-wheel-key">
+          <input type="checkbox" id="kit-check-kit-locking-wheel-key" value="kit-locking-wheel-key" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Ключ от секреток</span><span class="kit-item-detail">Если стоят секретные болты, храни подходящий ключ вместе с колёсными инструментами.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-tyre-compressor" for="kit-check-kit-tyre-compressor">
+          <input type="checkbox" id="kit-check-kit-tyre-compressor" value="kit-tyre-compressor" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Компрессор с манометром</span><span class="kit-item-detail">Проверь совместимость питания; нужное давление бери из таблички автомобиля или руководства.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-work-gloves" for="kit-check-kit-work-gloves">
+          <input type="checkbox" id="kit-check-kit-work-gloves" value="kit-work-gloves" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Рабочие перчатки</span><span class="kit-item-detail">Подбери перчатки своего размера для грязных вещей и обращения с багажом.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-rain-poncho" for="kit-check-kit-rain-poncho">
+          <input type="checkbox" id="kit-check-kit-rain-poncho" value="kit-rain-poncho" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Дождевик с капюшоном</span><span class="kit-item-detail">Положи компактный дождевик по размеру: пригодится при вынужденной остановке в дождь.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-basic-tools" for="kit-check-kit-basic-tools">
+          <input type="checkbox" id="kit-check-kit-basic-tools" value="kit-basic-tools" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Небольшой набор инструментов</span><span class="kit-item-detail">Собери знакомые инструменты для простых задач; сложный ремонт оставь специалистам помощи.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-jump-starter" for="kit-check-kit-jump-starter">
+          <input type="checkbox" id="kit-check-kit-jump-starter" value="kit-jump-starter" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Провода или пусковое устройство</span><span class="kit-item-detail">Подбери совместимое с машиной оборудование. Подключение и хранение только по инструкциям автомобиля и самого устройства.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Брать в поездку</span></span></span>
+        </label></div><p class="kit-group-empty" hidden>В этом разделе всё отмечено.</p></div>
+    </details><details class="kit-group" data-kit-group="comfort" >
+      <summary><span class="kit-group-number">03</span><span class="kit-group-name">Для удобства</span><span data-kit-group-count>0 из 9</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary>
+      <div class="kit-group-body"><p class="kit-group-description">Небольшие вещи для чистоты, покупок и потребностей пассажиров.</p><div class="kit-items"><label class="kit-item" id="kit-item-kit-phone-holder" for="kit-check-kit-phone-holder">
+          <input type="checkbox" id="kit-check-kit-phone-holder" value="kit-phone-holder" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Надёжный держатель телефона</span><span class="kit-item-detail">Закрепи телефон вне зон подушек и обзора. Настрой маршрут до начала движения.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-hygiene-wipes" for="kit-check-kit-hygiene-wipes">
+          <input type="checkbox" id="kit-check-kit-hygiene-wipes" value="kit-hygiene-wipes" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Салфетки для рук</span><span class="kit-item-detail">Возьми небольшую закрывающуюся упаковку; заменяй высохшие салфетки и соблюдай условия хранения.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-waste-bags" for="kit-check-kit-waste-bags">
+          <input type="checkbox" id="kit-check-kit-waste-bags" value="kit-waste-bags" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Пакеты для мусора</span><span class="kit-item-detail">Держи несколько пакетов для отходов и мокрых вещей; мусор регулярно выбрасывай.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-microfibre-cloth" for="kit-check-kit-microfibre-cloth">
+          <input type="checkbox" id="kit-check-kit-microfibre-cloth" value="kit-microfibre-cloth" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Чистая микрофибра</span><span class="kit-item-detail">Выдели отдельную мягкую салфетку для стекла; храни её чистой в чехле.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-shopping-bags" for="kit-check-kit-shopping-bags">
+          <input type="checkbox" id="kit-check-kit-shopping-bags" value="kit-shopping-bags" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Сумки для покупок</span><span class="kit-item-detail">Сложи многоразовые сумки в одно место, чтобы они не разлетались по багажнику.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-sunglasses-case" for="kit-check-kit-sunglasses-case">
+          <input type="checkbox" id="kit-check-kit-sunglasses-case" value="kit-sunglasses-case" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Очки в футляре</span><span class="kit-item-detail">Бери подходящие очки с собой; не оставляй их на раскалённой приборной панели.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Брать в поездку</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-personal-medicine" for="kit-check-kit-personal-medicine">
+          <input type="checkbox" id="kit-check-kit-personal-medicine" value="kit-personal-medicine" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Личные лекарства</span><span class="kit-item-detail">Бери нужные лекарства в поездку; соблюдай условия хранения и забирай после прибытия.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Брать в поездку</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-portable-battery" for="kit-check-kit-portable-battery">
+          <input type="checkbox" id="kit-check-kit-portable-battery" value="kit-portable-battery" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Заряженный пауэрбанк</span><span class="kit-item-detail">Бери исправный аккумулятор для поездки; не оставляй его постоянно в жаркой машине.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-optional">По желанию</span><span>Брать в поездку</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-road-snacks" for="kit-check-kit-road-snacks">
+          <input type="checkbox" id="kit-check-kit-road-snacks" value="kit-road-snacks" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Запас перекуса</span><span class="kit-item-detail">Подбери продукты длительного хранения с учётом аллергий; проверяй сроки и температурные ограничения.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Брать в поездку</span></span></span>
+        </label></div><p class="kit-group-empty" hidden>В этом разделе всё отмечено.</p></div>
+    </details><details class="kit-group" data-kit-group="seasonal" >
+      <summary><span class="kit-group-number">04</span><span class="kit-group-name">Зима и дальняя дорога</span><span data-kit-group-count>0 из 8</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary>
+      <div class="kit-group-body"><p class="kit-group-description">Дополни набор по погоде, длительности маршрута и количеству людей.</p><div class="kit-items"><label class="kit-item" id="kit-item-kit-snow-brush" for="kit-check-kit-snow-brush">
+          <input type="checkbox" id="kit-check-kit-snow-brush" value="kit-snow-brush" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Щётка и скребок</span><span class="kit-item-detail">До морозов положи инструменты для очистки снега и льда со стёкол.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-snow-shovel" for="kit-check-kit-snow-shovel">
+          <input type="checkbox" id="kit-check-kit-snow-shovel" value="kit-snow-shovel" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Компактная снеговая лопата</span><span class="kit-item-detail">Для снежного маршрута возьми подходящую лопату и закрепи её в багажнике.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-traction-grit" for="kit-check-kit-traction-grit">
+          <input type="checkbox" id="kit-check-kit-traction-grit" value="kit-traction-grit" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Песок для сцепления</span><span class="kit-item-detail">На снежную дорогу можно взять песок в закрытой таре для скользких участков.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-winter-washer" for="kit-check-kit-winter-washer">
+          <input type="checkbox" id="kit-check-kit-winter-washer" value="kit-winter-washer" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Зимняя омывающая жидкость</span><span class="kit-item-detail">Подбери жидкость под ожидаемую температуру; запас перевози закрытым, отдельно от питьевой воды.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-warm-clothes" for="kit-check-kit-warm-clothes">
+          <input type="checkbox" id="kit-check-kit-warm-clothes" value="kit-warm-clothes" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Сухая тёплая одежда</span><span class="kit-item-detail">Возьми дополнительные слои, шапки и перчатки для каждого пассажира по погоде.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Брать в поездку</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-warm-blankets" for="kit-check-kit-warm-blankets">
+          <input type="checkbox" id="kit-check-kit-warm-blankets" value="kit-warm-blankets" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Тёплые одеяла</span><span class="kit-item-detail">Подготовь сухие одеяла для пассажиров на случай длительного ожидания помощи зимой.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-emergency-blanket" for="kit-check-kit-emergency-blanket">
+          <input type="checkbox" id="kit-check-kit-emergency-blanket" value="kit-emergency-blanket" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Термопокрывало в упаковке</span><span class="kit-item-detail">Добавь компактное спасательное покрывало как запасной вариант; открытый огонь в салоне исключи.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-offline-route" for="kit-check-kit-offline-route">
+          <input type="checkbox" id="kit-check-kit-offline-route" value="kit-offline-route" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Карты без интернета</span><span class="kit-item-detail">Подготовь доступный без связи маршрут и сообщи близкому человеку ожидаемое время прибытия.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-seasonal">По сезону</span><span>Брать в поездку</span></span></span>
+        </label></div><p class="kit-group-empty" hidden>В этом разделе всё отмечено.</p></div>
+    </details><details class="kit-group" data-kit-group="storage" >
+      <summary><span class="kit-group-number">05</span><span class="kit-group-name">Порядок в машине</span><span data-kit-group-count>0 из 8</span><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary>
+      <div class="kit-group-body"><p class="kit-group-description">Быстрый доступ, закреплённый груз и свободные зоны безопасности.</p><div class="kit-items"><label class="kit-item" id="kit-item-kit-heavy-cargo-low" for="kit-check-kit-heavy-cargo-low">
+          <input type="checkbox" id="kit-check-kit-heavy-cargo-low" value="kit-heavy-cargo-low" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Тяжёлое внизу</span><span class="kit-item-detail">Расположи тяжёлые вещи низко у спинки заднего сиденья и надёжно закрепи.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-cargo-straps" for="kit-check-kit-cargo-straps">
+          <input type="checkbox" id="kit-check-kit-cargo-straps" value="kit-cargo-straps" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Ремни крепления груза</span><span class="kit-item-detail">Используй предусмотренные точки крепления; проверяй натяжение ремней после изменения укладки багажа.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-fixed-organizer" for="kit-check-kit-fixed-organizer">
+          <input type="checkbox" id="kit-check-kit-fixed-organizer" value="kit-fixed-organizer" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Закреплённый органайзер</span><span class="kit-item-detail">Коробка объединяет мелочи, но не заменяет крепления; инструменты храни вне пространства под сиденьями.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-recommended">Желательно</span><span>Багажник</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-clear-pedals" for="kit-check-kit-clear-pedals">
+          <input type="checkbox" id="kit-check-kit-clear-pedals" value="kit-clear-pedals" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Свободное место у педалей</span><span class="kit-item-detail">Убери бутылки и другие предметы из водительского пространства; проверь фиксацию коврика.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-clear-airbags" for="kit-check-kit-clear-airbags">
+          <input type="checkbox" id="kit-check-kit-clear-airbags" value="kit-clear-airbags" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Свободные зоны подушек</span><span class="kit-item-detail">Не размещай вещи в местах раскрытия подушек; расположение уточни по руководству.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Салон</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-emergency-access" for="kit-check-kit-emergency-access">
+          <input type="checkbox" id="kit-check-kit-emergency-access" value="kit-emergency-access" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Доступ к аварийному набору</span><span class="kit-item-detail">Укладывай багаж так, чтобы аптечка, огнетушитель и аварийный знак оставались доступными.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Проверить в машине</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-no-aerosol-storage" for="kit-check-kit-no-aerosol-storage">
+          <input type="checkbox" id="kit-check-kit-no-aerosol-storage" value="kit-no-aerosol-storage" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Аэрозоли вне машины</span><span class="kit-item-detail">Не храни аэрозольные баллоны постоянно в автомобиле; проверяй ограничения температуры на этикетке.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Брать в поездку</span></span></span>
+        </label><label class="kit-item" id="kit-item-kit-load-final-check" for="kit-check-kit-load-final-check">
+          <input type="checkbox" id="kit-check-kit-load-final-check" value="kit-load-final-check" data-kit-check>
+          <span class="check-box" aria-hidden="true"><span class="icon " aria-hidden="true" style="--icon:url(assets/icons/check.svg)"></span></span>
+          <span class="kit-item-copy"><span class="kit-item-title">Проверка уложенного багажа</span><span class="kit-item-detail">Сохрани обзор, убери незакреплённые вещи; учитывай допустимую загрузку автомобиля вместе с пассажирами.</span><span class="kit-item-meta"><span class="kit-priority kit-priority-essential">База</span><span>Проверить в машине</span></span></span>
+        </label></div><p class="kit-group-empty" hidden>В этом разделе всё отмечено.</p></div>
+    </details></div>
+      </div>
+      <div class="kit-footnotes">
+        <p><strong>Для легковой машины в Молдове.</strong> Пункт 122(6)(j) ПДД требует аптечку, огнетушитель, жилет и аварийный знак либо переносной красный мигающий фонарь. Аптечку и огнетушитель крепят в местах изготовителя; если их нет, в другом доступном месте, кроме багажника легкового авто. Жилет обязателен при работах с остановленной на дороге машиной, независимо от времени суток (п. 11(d)). <a href="https://www.legis.md/cautare/getResults?doc_id=153581&amp;lang=ro" target="_blank" rel="noopener noreferrer">Текст ПДД</a>. Перед выездом за границу проверь требования стран маршрута.</p>
+        <details class="kit-sources"><summary>На чём основан список<span class="icon" style="--icon:url(assets/icons/plus.svg)" aria-hidden="true"></span></summary><p>Самостоятельная практическая памятка по материалам дорожной безопасности и руководствам производителей. Конкретное оборудование и способы его применения сверяй с руководством своей машины.</p><ul><li><a href="https://www.legis.md/cautare/getResults?doc_id=153581&amp;lang=ro" target="_blank" rel="noopener noreferrer">ПДД Молдовы, редакция от 20.09.2026: оснащение (122(6)(j)), жилет (11(d))</a></li><li><a href="https://www.nsc.org/community-safety/safety-topics/emergency-preparedness/emergency-supplies-for-car" target="_blank" rel="noopener noreferrer">National Safety Council: аварийный набор автомобиля</a></li><li><a href="https://www.nhtsa.gov/winter-driving-tips" target="_blank" rel="noopener noreferrer">NHTSA: подготовка к зимней поездке</a></li><li><a href="https://dem.utah.gov/resource/vehicle-emergency-kit/" target="_blank" rel="noopener noreferrer">Utah Emergency Management: автомобильный аварийный комплект</a></li><li><a href="https://www.volvocars.com/static/support-content/pdfs/uk_en-GB_v60_2026_UM_48c1c94c0281ddaa3741b439fd2a1b1e.pdf" target="_blank" rel="noopener noreferrer">Volvo V60: руководство, размещение груза и штатное оборудование</a></li><li><a href="https://www.racv.com.au/royalauto/transport/cars/things-never-keep-in-car.html" target="_blank" rel="noopener noreferrer">RACV: что не стоит хранить в машине</a></li></ul></details>
+      </div>
+    </section>
+
     <section class="safety-section wrap" aria-labelledby="safety-title">
       <div class="safety-intro"><h2 id="safety-title">Три важных уточнения.</h2><p>В вопросах безопасности детали имеют значение.</p></div>
       <div class="safety-notes"><details class="safety-note"><summary>Шторка багажника не заменяет крепление груза<span class="icon " aria-hidden="true" style="--icon:url(assets/icons/plus.svg)"></span></summary><p>Volvo описывает её как средство скрыть вещи от взгляда и отдельно требует закреплять предметы. Вывод: закрытая шторка сама по себе не означает, что груз безопасно удержится при ударе. На неё также нельзя складывать вещи.</p></details>
@@ -409,8 +629,8 @@
     <div class="search-input-wrap"><span class="icon" style="--icon:url(assets/icons/magnifying-glass.svg)" aria-hidden="true"></span><input id="guide-search" type="search" autocomplete="off" placeholder="Например, масло, тормоза или шины" aria-describedby="search-status"></div>
     <p id="search-status" role="status" aria-live="polite">Начни вводить слово или выбери тему.</p>
     <div id="search-results"></div>
-    <div class="search-dialog-footer"><span>Поиск по 121 заметке</span><span><kbd>Esc</kbd> закрыть</span></div>
+    <div class="search-dialog-footer"><span>121 заметка и список вещей</span><span><kbd>Esc</kbd> закрыть</span></div>
   </dialog>
-  <noscript><style>.header-actions,.mobile-chapter-picker,.chapter-pager,.checklist-controls,.checklist-status,.storage-note{display:none!important}</style></noscript>
+  <noscript><style>.header-actions,.mobile-chapter-picker,.chapter-pager,.checklist-controls,.checklist-status,.storage-note,.kit-controls,.kit-progress,.kit-storage-note,[data-kit-group-count]{display:none!important}</style></noscript>
 </body>
 </html>

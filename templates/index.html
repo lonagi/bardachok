@@ -36,6 +36,7 @@
       <nav class="main-nav" aria-label="Главная навигация">
         <a href="#guide">Справочник</a>
         <a href="#checklist">Памятка</a>
+        <a href="#car-kit">В машине</a>
         <a href="#about">О проекте</a>
       </nav>
       <div class="header-actions">
@@ -99,14 +100,42 @@
       <div class="checklist-layout wrap">
         <div class="checklist-intro">
           <span class="checklist-symbol" aria-hidden="true"><span class="icon" style="--icon:url(assets/icons/check-square.svg)"></span></span>
-          <h2 id="checklist-title">Прочитал?<br>Теперь проверь.</h2>
+          <h2 id="checklist-title">Прочитал?<br> Теперь проверь.</h2>
           <p>Знания становятся полезными, когда превращаются в действия. Отметь то, что уже сделано.</p>
           <div class="checklist-status" role="status" aria-live="polite"><strong id="check-count">0</strong><span>из 9 пунктов готово</span></div>
           <p class="storage-note">Отметки сохраняются в этом браузере.</p>
           <div class="checklist-controls"><button class="text-button" id="reset-checklist" type="button">Сбросить отметки</button><button class="text-button print-button" type="button"><span class="icon" style="--icon:url(assets/icons/printer.svg)" aria-hidden="true"></span>Распечатать</button></div>
+          <a class="kit-jump" href="#car-kit">А что положить в машину?<span class="icon" style="--icon:url(assets/icons/arrow-right.svg)" aria-hidden="true"></span></a>
           <img class="cockpit-photo" src="assets/cockpit.webp" width="1536" height="1024" loading="lazy" alt="Кожаный руль и рычаг механической коробки передач">
         </div>
         <div class="checklist-items">%%CHECKLIST%%</div>
+      </div>
+    </section>
+
+    <section class="car-kit-section wrap" id="car-kit" aria-labelledby="car-kit-title">
+      <div class="kit-heading">
+        <div><p class="eyebrow">Личная памятка · Молдова</p><h2 id="car-kit-title">Что держать<br> в машине<span class="accent">.</span></h2></div>
+        <p>%%KIT_INTRO%%</p>
+      </div>
+      <div class="kit-layout">
+        <aside class="kit-overview" aria-label="Как пользоваться памяткой">
+          <div class="kit-progress" role="status" aria-live="polite"><strong id="kit-count">0</strong><span>из <span id="kit-total">%%KIT_COUNT%%</span><br>пунктов отмечено</span></div>
+          <p class="kit-storage-note">Отметки сохраняются в этом браузере.</p>
+          <div class="kit-controls">
+            <label class="kit-filter" for="kit-hide-done"><input id="kit-hide-done" type="checkbox"><span>Только неотмеченные</span></label>
+            <div class="kit-actions"><button class="text-button" id="kit-reset" type="button">Сбросить этот список</button><button class="text-button" type="button" data-print-kit><span class="icon" style="--icon:url(assets/icons/printer.svg)" aria-hidden="true"></span>Печать списка</button></div>
+          </div>
+          <div class="kit-map">
+            <p class="kit-map-title">Каждой вещи своё место</p>
+            <dl><div><dt>В салоне</dt><dd>То, что нужно быстро достать: жилет, фонарь, зарядка.</dd></div><div><dt>В багажнике</dt><dd>Тяжёлое внизу и закреплено. Аварийный набор доступен без полной разгрузки.</dd></div><div><dt>С собой</dt><dd>Документы, телефон, лекарства. Забирай из припаркованной машины.</dd></div></dl>
+          </div>
+          <p class="kit-priority-note"><strong>«Обязательно · Молдова»</strong> отмечает требования к оснащению легковой машины. <strong>«База»</strong> означает практический минимум. Остальное выбирай под свои поездки.</p>
+        </aside>
+        <div class="kit-groups">%%KIT_GROUPS%%</div>
+      </div>
+      <div class="kit-footnotes">
+        <p><strong>Для легковой машины в Молдове.</strong> Пункт 122(6)(j) ПДД требует аптечку, огнетушитель, жилет и аварийный знак либо переносной красный мигающий фонарь. Аптечку и огнетушитель крепят в местах изготовителя; если их нет, в другом доступном месте, кроме багажника легкового авто. Жилет обязателен при работах с остановленной на дороге машиной, независимо от времени суток (п. 11(d)). <a href="https://www.legis.md/cautare/getResults?doc_id=153581&amp;lang=ro" target="_blank" rel="noopener noreferrer">Текст ПДД</a>. Перед выездом за границу проверь требования стран маршрута.</p>
+        <details class="kit-sources"><summary>На чём основан список<span class="icon" style="--icon:url(assets/icons/plus.svg)" aria-hidden="true"></span></summary><p>Самостоятельная практическая памятка по материалам дорожной безопасности и руководствам производителей. Конкретное оборудование и способы его применения сверяй с руководством своей машины.</p><ul>%%KIT_SOURCES%%</ul></details>
       </div>
     </section>
 
@@ -136,8 +165,8 @@
     <div class="search-input-wrap"><span class="icon" style="--icon:url(assets/icons/magnifying-glass.svg)" aria-hidden="true"></span><input id="guide-search" type="search" autocomplete="off" placeholder="Например, масло, тормоза или шины" aria-describedby="search-status"></div>
     <p id="search-status" role="status" aria-live="polite">Начни вводить слово или выбери тему.</p>
     <div id="search-results"></div>
-    <div class="search-dialog-footer"><span>Поиск по 121 заметке</span><span><kbd>Esc</kbd> закрыть</span></div>
+    <div class="search-dialog-footer"><span>121 заметка и список вещей</span><span><kbd>Esc</kbd> закрыть</span></div>
   </dialog>
-  <noscript><style>.header-actions,.mobile-chapter-picker,.chapter-pager,.checklist-controls,.checklist-status,.storage-note{display:none!important}</style></noscript>
+  <noscript><style>.header-actions,.mobile-chapter-picker,.chapter-pager,.checklist-controls,.checklist-status,.storage-note,.kit-controls,.kit-progress,.kit-storage-note,[data-kit-group-count]{display:none!important}</style></noscript>
 </body>
 </html>
